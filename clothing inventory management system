@@ -1,0 +1,79 @@
+Clothes table :
+
+
+CREATE TABLE clothes( 
+    item_id INT PRIMARY KEY AUTO_INCREMENT,
+    item_name VARCHAR(100),
+    category VARCHAR(50),
+    brand VARCHAR(50),
+    size VARCHAR(10),
+    color VARCHAR(30),
+    price DECIMAL(10,2),
+    quantity INT                                    
+);
+
+
+Sales table 
+
+CREATE TABLE sales(
+    sale_id INT PRIMARY KEY AUTO_INCREMENT,
+    item_id INT,
+    item_name VARCHAR(100),
+    quantity_sold INT,
+    price DECIMAL(10,2),
+    total DECIMAL(10,2),
+    customer_name VARCHAR(100),
+    sale_date DATE
+);
+
+
+Calculate total
+
+total = price * quantity                    
+   
+
+
+def calculate_total(price, quantity):
+    return price * quantity
+
+For ex:  Current Stock = 25
+Sold = 3
+
+new_stock = 25 - 3
+
+UPDATE clothes
+SET quantity = quantity - %s
+WHERE item_id = %s;
+
+
+View sales report-
+SELECT * FROM sales;
+
+Menu-
+
+def sales_menu():
+
+    while True:
+
+        print("\n===== SALES MANAGEMENT =====")
+        print("1. Sell Product")
+        print("2. Generate Bill")
+        print("3. View Sales Report")
+        print("4. Exit")
+
+        choice = int(input("Enter Choice: "))
+
+        if choice == 1:
+            sell_product()
+
+        elif choice == 2:
+            generate_bill()
+
+        elif choice == 3:
+            view_sales_report()
+
+        elif choice == 4:
+            break
+
+        else:
+            print("Invalid Choice")
