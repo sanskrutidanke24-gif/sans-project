@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p>This is my first HTML page.</p>
+</body>
+</html>
+
+    <label>Name:</label>
+    <input type="text" name="name"><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
